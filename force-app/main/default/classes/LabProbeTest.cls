@@ -9,4 +9,9 @@ private class LabProbeTest {
     static void greetsTheLabWhenNoNameIsGiven() {
         Assert.areEqual('Hi, lab', LabProbe.greet(''));
     }
+
+    @IsTest
+    static void trimsTheNameItIsGiven() {
+        Assert.areEqual(LabProbe.greet('Nightshift'), LabProbe.greet('  Nightshift  '));
+    }
 }
