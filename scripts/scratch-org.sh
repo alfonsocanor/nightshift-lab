@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# A new scratch org from config/project-scratch-def.json, made the default target, with force-app deployed.
+# A new scratch org from config/project-scratch-def.json, made the default target, with force-app
+# deployed and its lab release user (scripts/release-user.sh) created.
 #
 #   bash scripts/scratch-org.sh <alias> [days]     days: 1 to 30, default 30
 #
@@ -47,6 +48,8 @@ if [ -n "$(find force-app -type f -print -quit)" ]; then
 else
   echo "force-app is empty: nothing to deploy"
 fi
+
+bash scripts/release-user.sh "$org_alias"
 
 sf_json org display --target-org "$org_alias" |
   jq -r '.result | "\nReady: \(.alias), default target org, expires \(.expirationDate)\nOpen it: sf org open"'
