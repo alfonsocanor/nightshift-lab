@@ -8,4 +8,12 @@
         <shortDescription>Lab probe greeting</shortDescription>
         <value>Hello from the Nightshift Lifecycle Center probe</value>
     </labels>
+    <labels>
+        <fullName>Lab_Probe_Farewell</fullName>
+        <categories>NightshiftLab</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Lab probe farewell</shortDescription>
+        <value>Goodbye from the Nightshift Lifecycle Center probe</value>
+    </labels>
 </CustomLabels>
