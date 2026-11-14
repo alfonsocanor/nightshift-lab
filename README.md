@@ -7,11 +7,10 @@ A Salesforce DX project for testing Nightshift end to end: its set-up wizard, an
 The Dev Hub is the org aliased `nightshift` (already set as this project's `target-dev-hub`).
 
 ```bash
-# a new scratch org, as the default target
-sf org create scratch --definition-file config/project-scratch-def.json --alias ns-dev --set-default --duration-days 30
+# a new scratch org: checks the Dev Hub's limits, creates it for 30 days
+# (or the days given), makes it the default target and deploys force-app
+bash scripts/scratch-org.sh ns-dev [days]
 
-# push the project, then open the org
-sf project deploy start
 sf org open
 
 # see what is live and how many are left today

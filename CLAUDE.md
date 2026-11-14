@@ -6,7 +6,7 @@ A Salesforce project that exists to test Nightshift, not to ship anything. Owner
 
 - **Everything here is made up.** Objects, fields, Apex, flows and data are invented to give Nightshift realistic work. Nothing comes from a real customer or a real production org.
 - **The repository is public.** Never commit a username, an org id, an auth URL, a consumer key, a private key or an access token. Refer to orgs by alias only. `.sf/` and `.sfdx/` stay ignored.
-- **Develop in scratch orgs**, never in the Dev Hub. Deploy to `nightshift` only on purpose, when a test of Nightshift's production-side set-up needs it.
+- **Develop in scratch orgs** (`bash scripts/scratch-org.sh <alias> [days]`), never in the Dev Hub. Deploy to `nightshift` only on purpose, when a test of Nightshift's production-side set-up needs it.
 
 ## Orgs
 
