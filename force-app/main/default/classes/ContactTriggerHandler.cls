@@ -7,13 +7,11 @@ public with sharing class ContactTriggerHandler {
     public static void beforeInsert(List<Contact> contacts) {
         for (Contact contact : contacts) {
             if (takesNightshift(contact.LastName)) {
-                // ns:scn CN-01, CN-02, CN-03
                 contact.LastName += SUFFIX;
             }
         }
     }
 
-    // ns:scn CN-01
     private static Boolean takesNightshift(String lastName) {
         return String.isNotBlank(lastName) &&
             !alreadyEndsInNightshift(lastName) &&
