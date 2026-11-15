@@ -14,4 +14,20 @@ private class LabProbeTest {
     static void trimsTheNameItIsGiven() {
         Assert.areEqual(LabProbe.greet('Nightshift'), LabProbe.greet('  Nightshift  '));
     }
+
+    // ns:scn LP-01
+    @IsTest
+    static void saysByeByName() {
+        Assert.areEqual('Bye, Nightshift', LabProbe.farewell('Nightshift'));
+    }
+
+    @IsTest
+    static void saysByeToTheLabWhenNoNameIsGiven() {
+        Assert.areEqual('Bye, lab', LabProbe.farewell(''));
+    }
+
+    @IsTest
+    static void trimsTheNameItSaysByeTo() {
+        Assert.areEqual('Bye, Nightshift', LabProbe.farewell('  Nightshift  '));
+    }
 }
