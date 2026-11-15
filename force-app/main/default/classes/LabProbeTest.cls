@@ -15,7 +15,6 @@ private class LabProbeTest {
         Assert.areEqual(LabProbe.greet('Nightshift'), LabProbe.greet('  Nightshift  '));
     }
 
-    // ns:scn LP-01
     @IsTest
     static void saysByeByName() {
         Assert.areEqual('Bye, Nightshift', LabProbe.farewell('Nightshift'));
